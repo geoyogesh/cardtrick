@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="CardTrick.Silverlight.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <ListBox x:Name="lbxpool1" HorizontalAlignment="Left" Height="100" Margin="65,79,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox x:Name="lbxpool2" HorizontalAlignment="Left" Height="100" Margin="198,79,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox x:Name="lbxpool3" HorizontalAlignment="Left" Height="100" Margin="333,79,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="btnpool1" Content="Pool1" HorizontalAlignment="Left" Margin="78,36,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnpool2" Content="Pool2" HorizontalAlignment="Left" Margin="223,36,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnpool3" Content="Pool3" HorizontalAlignment="Left" Margin="347,36,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</UserControl>
