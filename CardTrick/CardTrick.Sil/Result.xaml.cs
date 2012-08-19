@@ -14,19 +14,15 @@ namespace CardTrick.Sil
 {
     public partial class Result : ChildWindow
     {
-        public Result()
+        public Result(int Result)
         {
             InitializeComponent();
+            resulttext.Text = "The number you have in your mind is " + Result;
         }
 
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = true;
-        }
-
-        private void CancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.DialogResult = false;
         }
     }
 }

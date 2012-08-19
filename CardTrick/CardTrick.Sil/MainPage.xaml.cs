@@ -33,11 +33,14 @@ namespace CardTrick.Sil
             Initializedeck();
             dissemimate();
             print();
+            txtTip.Text = "Start:- Choose any number and press the 'Set' button based on the number in your mind";
         }
 
         private void showresult()
         {
-            MessageBox.Show(deck[10].ToString());
+            Result result = new Result(deck[10]);
+            result.Show();
+            //MessageBox.Show(deck[10].ToString());
             MainPage_Loaded(null, null);
         }
 
@@ -88,6 +91,7 @@ namespace CardTrick.Sil
             deck.Reverse();
             if (turn != 3)
             {
+                txtTip.Text = "Turn: " + turn + " Numbers are shuffled.... press the 'Set' button based on the number in your mind. In 3rd Turn we will show the number";
                 dissemimate();
                 print();
                 turn++;
