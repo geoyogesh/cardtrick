@@ -8,6 +8,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 namespace CardTrick.Sil
@@ -17,7 +18,9 @@ namespace CardTrick.Sil
         public Result(int Result)
         {
             InitializeComponent();
-            resulttext.Text = "The number you have in your mind is " + Result;
+            //resulttext.Text = "The Card you have in your mind is " + Result;
+            string url = "Images/" + Result + ".png";
+            imgresult.Source = new BitmapImage(new Uri(url, UriKind.RelativeOrAbsolute));
         }
 
         private void OKButton_Click(object sender, RoutedEventArgs e)

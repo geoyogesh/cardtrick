@@ -6,10 +6,12 @@
            Title="TA Da!!!!!!">
     <Grid x:Name="LayoutRoot" Margin="2">
         <Grid.RowDefinitions>
-            <RowDefinition />
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="96"/>
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <TextBlock  x:Name="resulttext" Text="The Number you have in your mind is " FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button x:Name="OKButton" Content="Do It Again" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,10,0" Grid.Row="1" />
+        <TextBlock  x:Name="resulttext" Grid.Row="0" Text="The Card you have in your mind is " FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Image x:Name="imgresult" Height="96" Width="71" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Row="1"></Image>
+        <Button x:Name="OKButton" Content="Do It Again"  Grid.Row="2" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,10,0"/>
     </Grid>
 </controls:ChildWindow>
