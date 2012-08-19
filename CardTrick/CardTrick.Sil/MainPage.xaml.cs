@@ -52,6 +52,12 @@ namespace CardTrick.Sil
             sppool2.Children.Clear();
             sppool3.Children.Clear();
 
+
+            var l1 = new List<Image>();
+            var l2 = new List<Image>();
+            var l3 = new List<Image>();
+
+
             foreach (var item in pool1)
             {
                 Image img = new Image();
@@ -61,7 +67,8 @@ namespace CardTrick.Sil
                 img.Width = 72;
                 img.VerticalAlignment = VerticalAlignment.Top;
                 img.Margin = new Thickness(10);
-                sppool1.Children.Add(img);
+                l1.Add(img);
+                //sppool1.Children.Add(img);
             }
 
             foreach (var item in pool2)
@@ -73,7 +80,8 @@ namespace CardTrick.Sil
                 img.Width = 72;
                 img.VerticalAlignment = VerticalAlignment.Top;
                 img.Margin = new Thickness(10);
-                sppool2.Children.Add(img);
+                l2.Add(img);
+                //sppool2.Children.Add(img);
             }
             foreach (var item in pool3)
             {
@@ -84,9 +92,30 @@ namespace CardTrick.Sil
                 img.Width = 72;
                 img.VerticalAlignment = VerticalAlignment.Top;
                 img.Margin = new Thickness(10);
-                sppool3.Children.Add(img);
+                l3.Add(img);
+                //sppool3.Children.Add(img);
             }
-            
+
+            l1.Shuffle();
+            l2.Shuffle();
+            l3.Shuffle();
+
+            foreach (var item in l1)
+            {
+                sppool1.Children.Add(item);
+            }
+
+            foreach (var item in l2)
+            {
+                sppool2.Children.Add(item);
+            }
+
+            foreach (var item in l3)
+            {
+                sppool3.Children.Add(item);
+            }
+
+
             //lbxpool1.ItemsSource = pool1;
             //lbxpool2.ItemsSource = pool2;
             //lbxpool3.ItemsSource = pool3;
