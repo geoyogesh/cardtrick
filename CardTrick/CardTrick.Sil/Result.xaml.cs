@@ -26,7 +26,6 @@ namespace CardTrick.Sil
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = true;
-
         }
     }
 }
